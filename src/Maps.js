@@ -10,6 +10,10 @@ class Maps extends Component {
     locations: PropTypes.array.isRequired
   }
 
+  state ={
+    markers: []
+  }
+
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
       if (isScriptLoadSucceed) {
@@ -97,6 +101,44 @@ class Maps extends Component {
             }
           ]
         });
+
+        let largeInfoWindow = new google.maps.InfoWindow();
+        let bounds = new google.maps.LatLngBounds();
+
+        for (var i = 0; i < this.props.locations.length; i++) {
+          let position = this.props.locations[i].location;
+          
+          let title = this.props.locations[i].title;
+
+          let marker = new google.maps.Marker({
+            map: this.map,
+            position: position,
+            title: title,
+            animation: google.maps.Animation.DROP,
+            id: i
+          });
+          this.state.markers.push(marker);
+          bounds.extend(marker.position);
+          marker.addListener('click', function() {
+            console.log(marker.title);
+            populateInfoWindow(this, largeInfoWindow);
+          });
+        }
+        this.map.fitBounds(bounds);
+          
+
+        function populateInfoWindow(marker, infowindow) {
+          // Check if infowindow is not alredy open
+          if (infowindow.marker != marker) {
+            infowindow.marker = marker;
+            infowindow.setContent('<div>' + marker.title + '</div>');
+            infowindow.open(this.map, marker);
+            // Make sure the marker property is cleared if the infowindow is closed.
+            infowindow.addListener('closeclick', () => {
+              infowindow.setMarker(null);
+            });
+          }
+        }
 
         // if (navigator.geolocation) {
         //   navigator.geolocation.getCurrentPosition((position) => {
