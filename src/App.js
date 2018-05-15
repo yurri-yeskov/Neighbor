@@ -23,7 +23,9 @@ class App extends Component {
             ) )}
           </ul>
         </nav>
-        <Maps />
+        <Maps 
+          locations={this.state.locations}
+        />
       </main>
     );
   }
