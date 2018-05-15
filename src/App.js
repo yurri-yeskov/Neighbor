@@ -18,7 +18,9 @@ class App extends Component {
         <nav>
           <h1>Neighborhood Map</h1>
           <ul>
-            
+            {this.state.locations.map( (location) => (
+              <li key={location.title}>{location.title}</li>
+            ) )}
           </ul>
         </nav>
         <Maps />
