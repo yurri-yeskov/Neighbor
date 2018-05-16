@@ -11,13 +11,14 @@ class Maps extends Component {
   }
 
   state ={
-    markers: []
+    markers: [],
+    map: null
   }
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
       if (isScriptLoadSucceed) {
-        this.map = new google.maps.Map(this.refs.map, {
+        this.state.map = new google.maps.Map(this.refs.map, {
           center: {lat: 10.794234, lng: 106.706541},
           zoom: 13,
           styles: [
@@ -111,7 +112,7 @@ class Maps extends Component {
           let title = this.props.locations[i].title;
 
           let marker = new google.maps.Marker({
-            map: this.map,
+            map: this.state.map,
             position: position,
             title: title,
             animation: google.maps.Animation.DROP,
@@ -124,15 +125,15 @@ class Maps extends Component {
             populateInfoWindow(this, largeInfoWindow);
           });
         }
-        this.map.fitBounds(bounds);
+        this.state.map.fitBounds(bounds);
           
 
         function populateInfoWindow(marker, infowindow) {
           // Check if infowindow is not alredy open
-          if (infowindow.marker != marker) {
+          if (infowindow.marker !== marker) {
             infowindow.marker = marker;
             infowindow.setContent('<div>' + marker.title + '</div>');
-            infowindow.open(this.map, marker);
+            infowindow.open(this.state.map, marker);
             // Make sure the marker property is cleared if the infowindow is closed.
             infowindow.addListener('closeclick', () => {
               infowindow.setMarker(null);
@@ -176,7 +177,7 @@ class Maps extends Component {
     return (    
     <div>
       <div id="map" ref="map"></div>
-      { !this.map && <div className="center-md">Loading...</div> } 
+      { !this.state.map && <div className="center-md">Loading...</div> } 
     </div>
     )
   }
