@@ -12,31 +12,8 @@ class Maps extends Component {
 
   state ={
     markers: [],
-    map: {}
-  }
-
-  populateInfoWindow = (marker, infowindow) => {
-
-    // Check if infowindow is not alredy open
-    if (infowindow.marker !== marker) {
-      infowindow.marker = marker;
-      infowindow.setContent('<div>' + marker.title + '</div>');
-      infowindow.open(this.state.map, marker);
-      // Make sure the marker property is cleared if the infowindow is closed.
-      infowindow.addListener('closeclick', () => {
-        console.log(infowindow)
-        infowindow.close();
-      });
-    }
-  }
-
-  componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
-    if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
-      if (isScriptLoadSucceed) {
-        this.state.map = new google.maps.Map(this.refs.map, {
-          center: {lat: 10.794234, lng: 106.706541},
-          zoom: 13,
-          styles: [
+    map: {},
+    styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
@@ -115,7 +92,30 @@ class Maps extends Component {
               elementType: 'labels.text.stroke',
               stylers: [{color: '#17263c'}]
             }
-          ]
+    ]
+  }
+
+  populateInfoWindow = (marker, infowindow) => {
+    // Check if infowindow is not alredy open
+    if (infowindow.marker !== marker) {
+      infowindow.marker = marker;
+      infowindow.setContent('<div>' + marker.title + '</div>');
+      infowindow.open(this.state.map, marker);
+      // Make sure the marker property is cleared if the infowindow is closed.
+      infowindow.addListener('closeclick', () => {
+        console.log(infowindow)
+        infowindow.close();
+      });
+    }
+  }
+
+  componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
+    if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
+      if (isScriptLoadSucceed) {
+        this.state.map = new google.maps.Map(this.refs.map, {
+          center: {lat: 10.794234, lng: 106.706541},
+          zoom: 13,
+          styles: this.state.styles
         });
 
         let largeInfoWindow = new google.maps.InfoWindow();
@@ -139,37 +139,10 @@ class Maps extends Component {
           });
         }
         this.state.map.fitBounds(bounds);
-        // if (navigator.geolocation) {
-        //   navigator.geolocation.getCurrentPosition((position) => {
-        //     const pos = {
-        //       lat: position.coords.latitude,
-        //       lng: position.coords.longitude
-        //     };
-
-        //     this.map.setCenter(pos);
-
-        //     const marker = new google.maps.Marker({
-        //       position: pos,
-        //       map: this.map,
-        //       title: 'Hello World!'
-        //     });                
-        //   }, () => {
-        //     console.log('navigator disabled');
-        //   });
-        // } else {
-        //   // Browser doesn't support Geolocation
-        //   console.log('navigator disabled');
-        // }
       }
       else this.props.onError()
     }
   }
-
-  // this.marker2 = new google.maps.Marker({
-  //             position: this.props.locations[0].location,
-  //             map: this.map,
-  //             title: this.props.locations[0].title
-  //           });
 
   render(){
     return (    
