@@ -12,7 +12,22 @@ class Maps extends Component {
 
   state ={
     markers: [],
-    map: null
+    map: {}
+  }
+
+  populateInfoWindow = (marker, infowindow) => {
+
+    // Check if infowindow is not alredy open
+    if (infowindow.marker !== marker) {
+      infowindow.marker = marker;
+      infowindow.setContent('<div>' + marker.title + '</div>');
+      infowindow.open(this.state.map, marker);
+      // Make sure the marker property is cleared if the infowindow is closed.
+      infowindow.addListener('closeclick', () => {
+        console.log(infowindow)
+        infowindow.close();
+      });
+    }
   }
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
@@ -105,7 +120,6 @@ class Maps extends Component {
 
         let largeInfoWindow = new google.maps.InfoWindow();
         let bounds = new google.maps.LatLngBounds();
-
         for (var i = 0; i < this.props.locations.length; i++) {
           let position = this.props.locations[i].location;
           
@@ -120,27 +134,11 @@ class Maps extends Component {
           });
           this.state.markers.push(marker);
           bounds.extend(marker.position);
-          marker.addListener('click', function() {
-            console.log(marker.title);
-            populateInfoWindow(this, largeInfoWindow);
+          marker.addListener('click', () => {
+            this.populateInfoWindow(marker, largeInfoWindow)
           });
         }
         this.state.map.fitBounds(bounds);
-          
-
-        function populateInfoWindow(marker, infowindow) {
-          // Check if infowindow is not alredy open
-          if (infowindow.marker !== marker) {
-            infowindow.marker = marker;
-            infowindow.setContent('<div>' + marker.title + '</div>');
-            infowindow.open(this.state.map, marker);
-            // Make sure the marker property is cleared if the infowindow is closed.
-            infowindow.addListener('closeclick', () => {
-              infowindow.setMarker(null);
-            });
-          }
-        }
-
         // if (navigator.geolocation) {
         //   navigator.geolocation.getCurrentPosition((position) => {
         //     const pos = {
