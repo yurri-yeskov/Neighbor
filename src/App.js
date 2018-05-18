@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Maps from './Maps.js'
+import Search from './Search.js'
 class App extends Component {
 
-  state = {
+state = {
     locations: [
       {title: 'La Metro RedLine', description: 'La Metro RedLine / North Hollywood Station', location: {lat:34.1689208, lng: -118.3767172}},
       {title: 'Mulholland Scenic Overview', description: 'Scenic Lookout', location: {lat:34.1335677, lng: -118.410631}},
@@ -15,19 +16,14 @@ class App extends Component {
   render() {
     return (
       <main>
-        <nav>
-          <h1>Neighborhood Map</h1>
-          <ul>
-            {this.state.locations.map( (location) => (
-              <li key={location.title}>{location.title}</li>
-            ) )}
-          </ul>
-        </nav>
+        <Search 
+          locations={this.state.locations}
+        />
         <Maps 
           locations={this.state.locations}
         />
       </main>
-    );
+    )
   }
 }
 
