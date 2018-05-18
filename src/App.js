@@ -10,7 +10,15 @@ state = {
       {title: 'Salt & Straw', description: 'Ice Cream Shop', location: {lat:34.1432587, lng: -118.3978998}},
       {title: 'Mendocino Farms', description: 'Sandwich Place', location: {lat:34.1497189, lng: -118.4412726}},
       {title: 'MidiCi, The Neapolitan Pizza', description: 'Pizza Restaurant', location: {lat:34.1511962, lng: -118.4515353}}
-    ]
+    ],
+    locationClicked: {}
+  }
+
+  locationClick = (location) => {
+    this.setState( (prevState) => {
+      console.log(location)
+      return { locationClicked: location}
+    })
   }
 
   render() {
@@ -18,9 +26,14 @@ state = {
       <main>
         <Search 
           locations={this.state.locations}
+          onClickLink={(onClickLink) => {
+            this.locationClick(onClickLink)
+          }
+          }
         />
         <Maps 
           locations={this.state.locations}
+          locationClicked={this.state.locationClicked}
         />
       </main>
     )

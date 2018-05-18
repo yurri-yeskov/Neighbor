@@ -5,13 +5,15 @@ class Search extends Component {
 
   // Typechecking with PropTypes
   static propTypes = {
-    locations: PropTypes.array.isRequired
+    locations: PropTypes.array.isRequired,
+    onClickLink: PropTypes.func.isRequired
   }
 
   
   handleLink(e, location) {
     e.preventDefault()
     console.log(location)
+    this.props.onClickLink(location)
   }
 
   render() {

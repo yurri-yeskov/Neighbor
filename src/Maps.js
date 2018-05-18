@@ -7,8 +7,12 @@ class Maps extends Component {
 
   // Typechecking with PropTypes
   static propTypes = {
-    locations: PropTypes.array.isRequired
+    locations: PropTypes.array.isRequired,
+    locationClicked: PropTypes.object.isRequired
   }
+
+
+  /* KAKO DA POVEZEM MAPS.JS SA STATE.LOCATIONCLICKED??????????????????*/
 
   state ={
     markers: [],
