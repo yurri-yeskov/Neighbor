@@ -102,10 +102,10 @@ class Maps extends Component {
       infowindow.setContent('<div>' + marker.title + '</div>');
       infowindow.open(this.state.map, marker);
       // Make sure the marker property is cleared if the infowindow is closed.
-      infowindow.addListener('closeclick', () => {
-        console.log(infowindow)
-        infowindow.close();
-      });
+      // infowindow.addListener('closeclick', () => {
+      //   console.log(infowindow)
+      //   infowindow.close();
+      // });
     }
   }
 
