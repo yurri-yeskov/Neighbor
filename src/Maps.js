@@ -104,13 +104,12 @@ class Maps extends Component {
   * @description locationClicked props from Search.js update
   */
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.locationClicked !== this.props.locationClicked) {
       this.state.markers.map( (marker) => {
         if (marker.title === this.props.locationClicked.title) {
+          marker.icon = "http://maps.google.com/mapfiles/kml/pal2/icon13.png"
           return this.populateInfoWindow(marker, this.state.largeInfoWindow)
         }
       })
-    }
   }
 
   populateInfoWindow = (marker, infowindow) => {

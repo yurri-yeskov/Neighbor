@@ -12,7 +12,6 @@ class Search extends Component {
   
   handleLink(e, location) {
     e.preventDefault()
-    console.log(location)
     this.props.onClickLink(location)
   }
 

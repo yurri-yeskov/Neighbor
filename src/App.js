@@ -16,7 +16,6 @@ state = {
 
   locationClick = (location) => {
     this.setState( (prevState) => {
-      console.log(location)
       return { locationClicked: location}
     })
   }
