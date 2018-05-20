@@ -125,27 +125,31 @@ class Maps extends Component {
   }
 
   addMarkers() {
-    this.state.largeInfoWindow = new google.maps.InfoWindow()
-        let bounds = new google.maps.LatLngBounds()
-        for (var i = 0; i < this.props.locations.length; i++) {
-          let position = this.props.locations[i].location
-          
-          let title = this.props.locations[i].title
+    let largeInfoWindow = new google.maps.InfoWindow()
+    this.setState((prevState) => {
+      return { largeInfoWindow: largeInfoWindow }
+    })
+    let bounds = new google.maps.LatLngBounds()
+    for (var i = 0; i < this.props.locations.length; i++) {
+      let position = this.props.locations[i].location
+      
+      let title = this.props.locations[i].title
 
-          let marker = new google.maps.Marker({
-            map: this.state.map,
-            position: position,
-            title: title,
-            animation: google.maps.Animation.DROP,
-            id: i
-          })
-          this.state.markers.push(marker)
-          bounds.extend(marker.position)
-          marker.addListener('click', () => {
-            this.populateInfoWindow(marker, this.state.largeInfoWindow)
-          })
-        }
-        this.state.map.fitBounds(bounds)
+      let marker = new google.maps.Marker({
+        icon: "http://maps.google.com/mapfiles/kml/pal2/icon5.png",
+        map: this.state.map,
+        position: position,
+        title: title,
+        animation: google.maps.Animation.DROP,
+        id: i
+      })
+      this.state.markers.push(marker)
+      bounds.extend(marker.position)
+      marker.addListener('click', () => {
+        this.populateInfoWindow(marker, this.state.largeInfoWindow)
+      })
+    }
+    this.state.map.fitBounds(bounds)
   }
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
@@ -155,7 +159,7 @@ class Maps extends Component {
           center: {lat: 10.794234, lng: 106.706541},
           zoom: 13,
           styles: this.state.styles
-        });
+        })
         this.addMarkers()
       }
       else this.props.onError()
