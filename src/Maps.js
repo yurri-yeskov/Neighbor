@@ -96,7 +96,8 @@ class Maps extends Component {
               elementType: 'labels.text.stroke',
               stylers: [{color: '#17263c'}]
             }
-    ]
+    ],
+    largeInfoWindow: null
   }
 
   /**
@@ -129,7 +130,7 @@ class Maps extends Component {
           styles: this.state.styles
         });
 
-        let largeInfoWindow = new google.maps.InfoWindow();
+        this.state.largeInfoWindow = new google.maps.InfoWindow();
         let bounds = new google.maps.LatLngBounds();
         for (var i = 0; i < this.props.locations.length; i++) {
           let position = this.props.locations[i].location;
@@ -146,7 +147,7 @@ class Maps extends Component {
           this.state.markers.push(marker);
           bounds.extend(marker.position);
           marker.addListener('click', () => {
-            this.populateInfoWindow(marker, largeInfoWindow)
+            this.populateInfoWindow(marker, this.state.largeInfoWindow)
           });
         }
         this.state.map.fitBounds(bounds);
