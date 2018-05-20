@@ -1,8 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  
 }
 
 * {
@@ -17,14 +15,39 @@ main {
 
 nav {
   background-color: white;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
+  color: #263c3f;
+}
+
+input {
+  width: 95%;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+
+ul {
+  padding-left: 0;
 }
 
 li {
   list-style: none;
+  border-bottom: solid grey 1px;
+  padding: 0.4em 0;
+}
+
+li:nth-child(even) {
+  background-color: #E6E2AF;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: EFECCA;
 }
 
 a {

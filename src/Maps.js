@@ -165,7 +165,7 @@ class Maps extends Component {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
       if (isScriptLoadSucceed) {
         this.state.map = new google.maps.Map(this.refs.map, {
-          center: {lat: 10.794234, lng: 106.706541},
+          center: {lat: 34.1657053, lng: -118.3970014},
           zoom: 13,
           styles: this.state.styles
         })
