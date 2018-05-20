@@ -11,9 +11,6 @@ class Maps extends Component {
     locationClicked: PropTypes.object.isRequired
   }
 
-
-  /* KAKO DA POVEZEM MAPS.JS SA STATE.LOCATIONCLICKED??????????????????*/
-
   state ={
     markers: [],
     map: {},
@@ -106,7 +103,7 @@ class Maps extends Component {
   componentDidUpdate(prevProps, prevState) {
       this.state.markers.map( (marker) => {
         if (marker.title === this.props.locationClicked.title) {
-          marker.icon = "http://maps.google.com/mapfiles/kml/pal2/icon13.png"
+          this.toggleBounce(marker)
           return this.populateInfoWindow(marker, this.state.largeInfoWindow)
         }
       })
@@ -115,6 +112,7 @@ class Maps extends Component {
   populateInfoWindow = (marker, infowindow) => {
       infowindow.marker = marker
       infowindow.setContent('<div>' + marker.title + '</div>')
+
       infowindow.open(this.state.map, marker)
       // Make sure the marker property is cleared if the infowindow is closed.
       // infowindow.addListener('closeclick', () => {
@@ -122,6 +120,15 @@ class Maps extends Component {
       //   infowindow.close()
       // })
 
+  }
+
+  /**
+  * @description Marker bounce animation 
+  */
+  toggleBounce(marker) {
+    marker.setAnimation(google.maps.Animation.BOUNCE)
+    // to bounce only once
+    setTimeout(function(){ marker.setAnimation(null) }, 700)
   }
 
   addMarkers() {
@@ -143,9 +150,11 @@ class Maps extends Component {
         animation: google.maps.Animation.DROP,
         id: i
       })
+      
       this.state.markers.push(marker)
       bounds.extend(marker.position)
       marker.addListener('click', () => {
+        this.toggleBounce(marker)
         this.populateInfoWindow(marker, this.state.largeInfoWindow)
       })
     }
