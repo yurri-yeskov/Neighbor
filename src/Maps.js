@@ -99,6 +99,9 @@ class Maps extends Component {
     ]
   }
 
+  /**
+  * @description locationClicked props update
+  */
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.locationClicked !== this.props.locationClicked) {
       console.log("clicked")
@@ -106,8 +109,6 @@ class Maps extends Component {
   }
 
   populateInfoWindow = (marker, infowindow) => {
-    // Check if infowindow is not alredy open
-
       infowindow.marker = marker;
       infowindow.setContent('<div>' + marker.title + '</div>');
       infowindow.open(this.state.map, marker);
