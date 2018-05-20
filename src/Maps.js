@@ -105,7 +105,11 @@ class Maps extends Component {
   */
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.locationClicked !== this.props.locationClicked) {
-      console.log("clicked")
+      this.state.markers.map( (marker) => {
+        if (marker.title === this.props.locationClicked.title) {
+          return this.populateInfoWindow(marker, this.state.largeInfoWindow)
+        }
+      })
     }
   }
 
