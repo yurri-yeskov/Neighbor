@@ -101,7 +101,7 @@ class Maps extends Component {
 
   populateInfoWindow = (marker, infowindow) => {
     // Check if infowindow is not alredy open
-    if (infowindow.marker !== marker) {
+
       infowindow.marker = marker;
       infowindow.setContent('<div>' + marker.title + '</div>');
       infowindow.open(this.state.map, marker);
@@ -110,7 +110,7 @@ class Maps extends Component {
       //   console.log(infowindow)
       //   infowindow.close();
       // });
-    }
+
   }
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
