@@ -137,20 +137,21 @@ class Maps extends Component {
       return { largeInfoWindow: largeInfoWindow }
     })
     let bounds = new google.maps.LatLngBounds()
+    console.log(this.props.locations)
     for (var i = 0; i < this.props.locations.length; i++) {
-      let position = this.props.locations[i].location
+      let lat = this.props.locations[i].venue.location.lat
+      let lng = this.props.locations[i].venue.location.lng
       
-      let title = this.props.locations[i].title
+      let title = this.props.locations[i].venue.name
 
       let marker = new google.maps.Marker({
         icon: "http://maps.google.com/mapfiles/kml/pal2/icon5.png",
         map: this.state.map,
-        position: position,
+        position: {lat:lat, lng: lng},
         title: title,
         animation: google.maps.Animation.DROP,
-        id: i
+        id: this.props.locations[i].venue.id
       })
-      
       this.state.markers.push(marker)
       bounds.extend(marker.position)
       marker.addListener('click', () => {
