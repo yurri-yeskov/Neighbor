@@ -1,0 +1,1796 @@
+{
+"response": {
+    "items": [
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4ae32772f964a520039121e3",
+              "name": "Weddington Golf And Tennis",
+              "contact": {},
+              "location": {
+                "address": "4141 Whitsett Ave",
+                "crossStreet": "Valley Spring Lane",
+                "lat": 34.14600630838101,
+                "lng": -118.40568470778669,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.14600630838101,
+                    "lng": -118.40568470778669
+                  }
+                ],
+                "distance": 2334,
+                "postalCode": "91604",
+                "cc": "US",
+                "city": "Studio City",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "4141 Whitsett Ave (Valley Spring Lane)",
+                  "Studio City, CA 91604",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 13,
+                "usersCount": 842,
+                "checkinsCount": 3142
+              },
+              "url": "http://www.weddingtongolfandtennis.com",
+              "rating": 8.6,
+              "ratingColor": "73CF42",
+              "ratingSignals": 51,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "tips": [
+              {
+                "id": "5352e4e9498e098f0a64b197",
+                "createdAt": 1397941481,
+                "text": "Golf and eating at the cafe.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/5352e4e9498e098f0a64b197",
+                "likes": {
+                  "count": 1,
+                  "groups": [],
+                  "summary": "1 like"
+                },
+                "logView": true,
+                "agreeCount": 1,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "11432100",
+                  "firstName": "James",
+                  "lastName": "Brisson",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/WCUFTEZ51ZODNKZE.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4ae32772f964a520039121e3-0"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "49ea01a2f964a52017661fe3",
+              "name": "Sherman Oaks Castle Park",
+              "contact": {
+                "phone": "+18187569459",
+                "formattedPhone": "+1 818-756-9459",
+                "twitter": "drharoldperlaza",
+                "facebook": "119743921414620",
+                "facebookUsername": "shermanoaksdentistry",
+                "facebookName": "Sherman Oaks Dentistry"
+              },
+              "location": {
+                "address": "4989 Sepulveda Blvd",
+                "lat": 34.1608215,
+                "lng": -118.4494439,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.1608215,
+                    "lng": -118.4494439
+                  }
+                ],
+                "distance": 4860,
+                "postalCode": "91403",
+                "cc": "US",
+                "neighborhood": "Sherman Oaks",
+                "city": "Sherman Oaks",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "4989 Sepulveda Blvd",
+                  "Sherman Oaks, CA 91403",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1f1931735",
+                  "name": "General Entertainment",
+                  "pluralName": "General Entertainment",
+                  "shortName": "Entertainment",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/default_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 40,
+                "usersCount": 4141,
+                "checkinsCount": 5976
+              },
+              "url": "http://www.laparks.org/castlepark",
+              "rating": 7.8,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 164,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Closed until 10:00 AM",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Closed until 10:00 AM"
+                },
+                "isOpen": false,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "tips": [
+              {
+                "id": "4e93d0e5d3e3941fc9d10888",
+                "createdAt": 1318310117,
+                "text": "The golf is fun, the arcade is trash",
+                "entities": [
+                  {
+                    "indices": [
+                      4,
+                      8
+                    ],
+                    "type": "search_match"
+                  }
+                ],
+                "type": "user",
+                "url": "http://www.goscoville.com",
+                "canonicalUrl": "https://foursquare.com/item/4e93d0e5d3e3941fc9d10888",
+                "likes": {
+                  "count": 2,
+                  "groups": [],
+                  "summary": "2 likes"
+                },
+                "logView": true,
+                "agreeCount": 2,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "9530303",
+                  "firstName": "Tony",
+                  "lastName": "Blass",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/PR0SPLJPWVYYCBOG.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-49ea01a2f964a52017661fe3-1"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4a46426af964a5209aa81fe3",
+              "name": "Lakeside Golf Club",
+              "contact": {},
+              "location": {
+                "address": "4500 W Lakeside Dr",
+                "lat": 34.145370752577044,
+                "lng": -118.34739804267883,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.145370752577044,
+                    "lng": -118.34739804267883
+                  }
+                ],
+                "distance": 5099,
+                "postalCode": "91505",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "4500 W Lakeside Dr",
+                  "Los Angeles, CA 91505",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 3,
+                "usersCount": 416,
+                "checkinsCount": 973
+              },
+              "rating": 8.9,
+              "ratingColor": "73CF42",
+              "ratingSignals": 24,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "tips": [
+              {
+                "id": "57cd9bb3498e9c000f2342d8",
+                "createdAt": 1473092531,
+                "text": "If you get the opportunity to play this course.... Take it.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/57cd9bb3498e9c000f2342d8",
+                "logView": true,
+                "agreeCount": 1,
+                "disagreeCount": 0,
+                "lastVoteText": "Upvoted Mar 11",
+                "lastUpvoteTimestamp": 1520781688,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "6229518",
+                  "firstName": "Ricky",
+                  "lastName": "Sherrill",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/PG3XUEJ2V4BUFNLA.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4a46426af964a5209aa81fe3-2"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4c3e87cf6faac9b66b720e76",
+              "name": "Studio City Golf Course",
+              "contact": {},
+              "location": {
+                "lat": 34.15052030528315,
+                "lng": -118.39652793074795,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.15052030528315,
+                    "lng": -118.39652793074795
+                  }
+                ],
+                "distance": 1690,
+                "cc": "US",
+                "city": "North Hollywood",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "North Hollywood, CA",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 2,
+                "usersCount": 91,
+                "checkinsCount": 275
+              },
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "isOpen": false,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "tips": [
+              {
+                "id": "4d8e82e8cb9b224bf7ca8641",
+                "createdAt": 1301185256,
+                "text": "Best maintained par 3 in LA. I'll also give it best hot dog! Delicious!",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/4d8e82e8cb9b224bf7ca8641",
+                "likes": {
+                  "count": 1,
+                  "groups": [],
+                  "summary": "1 like"
+                },
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 1
+                },
+                "user": {
+                  "id": "3974049",
+                  "firstName": "Michael",
+                  "lastName": "Villar",
+                  "gender": "none",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/IFZVO1O1WBXWOYOB.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4c3e87cf6faac9b66b720e76-3"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "51a386f67dd2e7f3352dd2cd",
+              "name": "GolfKon",
+              "contact": {},
+              "location": {
+                "address": "6930 Fulton Ave",
+                "crossStreet": "Fulton & Vanowen",
+                "lat": 34.194179789840625,
+                "lng": -118.422532081604,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.194179789840625,
+                    "lng": -118.422532081604
+                  }
+                ],
+                "distance": 3946,
+                "postalCode": "91606",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "6930 Fulton Ave (Fulton & Vanowen)",
+                  "Los Angeles, CA 91606",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": true,
+              "stats": {
+                "tipCount": 1,
+                "usersCount": 3,
+                "checkinsCount": 8
+              },
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "venuePage": {
+                "id": "57550598"
+              },
+              "storeId": "",
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "tips": [
+              {
+                "id": "51a388b2498ef1b33f108390",
+                "createdAt": 1369671858,
+                "text": "Memorial Tournament Today!",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/51a388b2498ef1b33f108390",
+                "photo": {
+                  "id": "51a388b57dd2e7f3352f1859",
+                  "createdAt": 1369671861,
+                  "source": {
+                    "name": "Foursquare Web",
+                    "url": "https://foursquare.com"
+                  },
+                  "prefix": "https://igx.4sqi.net/img/general/",
+                  "suffix": "/119534_EGUMc7QSpR_VD8oDe7g40M1VGXYuGoDufdqZefbJDJE.jpg",
+                  "width": 875,
+                  "height": 583,
+                  "visibility": "public"
+                },
+                "photourl": "https://igx.4sqi.net/img/general/original/119534_EGUMc7QSpR_VD8oDe7g40M1VGXYuGoDufdqZefbJDJE.jpg",
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "119534",
+                  "firstName": "Adam",
+                  "lastName": "Kontras",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/-1_1258999079301.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-51a386f67dd2e7f3352dd2cd-4"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b8d6f38f964a520a6fb32e3",
+              "name": "Balboa Golf Course",
+              "contact": {},
+              "location": {
+                "address": "16821 Burbank Blvd",
+                "lat": 34.17005437816839,
+                "lng": -118.49698818618042,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.17005437816839,
+                    "lng": -118.49698818618042
+                  }
+                ],
+                "distance": 9221,
+                "postalCode": "91436",
+                "cc": "US",
+                "city": "Encino",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "16821 Burbank Blvd",
+                  "Encino, CA 91436",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 1,
+                "usersCount": 590,
+                "checkinsCount": 1270
+              },
+              "rating": 8.5,
+              "ratingColor": "73CF42",
+              "ratingSignals": 18,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "4c42b86ca48d9c74faf10c40",
+                "createdAt": 1279441004,
+                "text": "Don't leave your food in the cart. Squirrels will eat it.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/4c42b86ca48d9c74faf10c40",
+                "likes": {
+                  "count": 3,
+                  "groups": [],
+                  "summary": "3 likes"
+                },
+                "logView": true,
+                "agreeCount": 3,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "179031",
+                  "firstName": "Lauren",
+                  "lastName": "Rabaino",
+                  "gender": "female",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/179031-Z3YSHUKICVR5YOXV.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b8d6f38f964a520a6fb32e3-5"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b08094df964a520b30223e3",
+              "name": "Van Nuys Golf Course",
+              "contact": {
+                "phone": "+18187858871",
+                "formattedPhone": "+1 818-785-8871"
+              },
+              "location": {
+                "address": "6550 Odessa Ave",
+                "lat": 34.189873987955465,
+                "lng": -118.48912487751845,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.189873987955465,
+                    "lng": -118.48912487751845
+                  }
+                ],
+                "distance": 8900,
+                "postalCode": "91406",
+                "cc": "US",
+                "city": "Van Nuys",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "6550 Odessa Ave",
+                  "Van Nuys, CA 91406",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 3,
+                "usersCount": 427,
+                "checkinsCount": 1505
+              },
+              "rating": 7.6,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 20,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "isOpen": false,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "53f92a94498ee05ba8918967",
+                "createdAt": 1408838292,
+                "text": "Quiet & peaceful😃",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/53f92a94498ee05ba8918967",
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "73259264",
+                  "firstName": "Gaylonn",
+                  "lastName": "Mayo",
+                  "gender": "female",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/73259264-TW3ULHR3ZH2QR0WC.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b08094df964a520b30223e3-6"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b7f2258f964a520171930e3",
+              "name": "encino golf course",
+              "contact": {},
+              "location": {
+                "lat": 34.170318362031686,
+                "lng": -118.49672018979797,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.170318362031686,
+                    "lng": -118.49672018979797
+                  }
+                ],
+                "distance": 9198,
+                "postalCode": "91436",
+                "cc": "US",
+                "city": "Encino",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "Encino, CA 91436",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 3,
+                "usersCount": 292,
+                "checkinsCount": 639
+              },
+              "rating": 7.9,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 9,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "510e8c74e4b04c8cadc72261",
+                "createdAt": 1359907956,
+                "text": "Beautiful course...For the valley!!",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/510e8c74e4b04c8cadc72261",
+                "likes": {
+                  "count": 1,
+                  "groups": [],
+                  "summary": "1 like"
+                },
+                "logView": true,
+                "agreeCount": 1,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "47261302",
+                  "firstName": "Hilda",
+                  "lastName": "Kracht",
+                  "gender": "female",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/YIWCOQK4UPRFC11T.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b7f2258f964a520171930e3-7"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4ac65192f964a520afb320e3",
+              "name": "Wilson golf course",
+              "contact": {
+                "phone": "90027",
+                "formattedPhone": "90027"
+              },
+              "location": {
+                "address": "4730 Crystal Springs Dr",
+                "lat": 34.14344576195292,
+                "lng": -118.28989822159322,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.14344576195292,
+                    "lng": -118.28989822159322
+                  }
+                ],
+                "distance": 10172,
+                "postalCode": "90027",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "4730 Crystal Springs Dr",
+                  "Los Angeles, CA 90027",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 5,
+                "usersCount": 705,
+                "checkinsCount": 1837
+              },
+              "rating": 8.2,
+              "ratingColor": "73CF42",
+              "ratingSignals": 37,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "isOpen": false,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "517c3ac6e4b0db4bc677f7bd",
+                "createdAt": 1367096006,
+                "text": "The clubhouse has amazing frozen beer!",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/517c3ac6e4b0db4bc677f7bd",
+                "photo": {
+                  "id": "517c3acae4b0b45da45c513e",
+                  "createdAt": 1367096010,
+                  "source": {
+                    "name": "Foursquare for iOS",
+                    "url": "https://foursquare.com/download/#/iphone"
+                  },
+                  "prefix": "https://igx.4sqi.net/img/general/",
+                  "suffix": "/30507349_9K6xuYRzAf377aMYoivp6oJmBpvC7WX4E4iqB1QNU9Q.jpg",
+                  "width": 1440,
+                  "height": 1920,
+                  "visibility": "public"
+                },
+                "photourl": "https://igx.4sqi.net/img/general/original/30507349_9K6xuYRzAf377aMYoivp6oJmBpvC7WX4E4iqB1QNU9Q.jpg",
+                "likes": {
+                  "count": 4,
+                  "groups": [],
+                  "summary": "4 likes"
+                },
+                "logView": true,
+                "agreeCount": 4,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "30507349",
+                  "firstName": "Bradley",
+                  "lastName": "Bowns",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/1VTOW1KVZEURFGB2.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4ac65192f964a520afb320e3-8"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4abedb16f964a5204b9020e3",
+              "name": "Mountain Gate Country Club",
+              "contact": {
+                "phone": "+13104766215",
+                "formattedPhone": "+1 310-476-6215"
+              },
+              "location": {
+                "address": "12445 Mountain Gate Dr",
+                "lat": 34.10828385331132,
+                "lng": -118.4881891357169,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.10828385331132,
+                    "lng": -118.4881891357169
+                  }
+                ],
+                "distance": 10557,
+                "postalCode": "90049",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "12445 Mountain Gate Dr",
+                  "Los Angeles, CA 90049",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": true,
+              "stats": {
+                "tipCount": 5,
+                "usersCount": 813,
+                "checkinsCount": 2151
+              },
+              "rating": 9.0,
+              "ratingColor": "00B551",
+              "ratingSignals": 37,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "5918a9d8f79faa6617b57cc4",
+                "createdAt": 1494788568,
+                "text": "Great course condition, beautiful views and wonderful event space.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/5918a9d8f79faa6617b57cc4",
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "395972644",
+                  "firstName": "Ian",
+                  "lastName": "Church",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/395972644-WSTF4OTNBKQDJJLG.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4abedb16f964a5204b9020e3-9"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b43bee0f964a52044e825e3",
+              "name": "Woodley Lakes Golf Course",
+              "contact": {
+                "phone": "+18187806886",
+                "formattedPhone": "+1 818-780-6886"
+              },
+              "location": {
+                "address": "6331 Woodley Ave",
+                "crossStreet": "Victory Dr.",
+                "lat": 34.18330011745454,
+                "lng": -118.49145140665831,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.18330011745454,
+                    "lng": -118.49145140665831
+                  }
+                ],
+                "distance": 8916,
+                "postalCode": "91406",
+                "cc": "US",
+                "city": "Van Nuys",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "6331 Woodley Ave (Victory Dr.)",
+                  "Van Nuys, CA 91406",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 4,
+                "usersCount": 405,
+                "checkinsCount": 1328
+              },
+              "url": "http://www.golf.lacity.org/cdp_woodley.htm",
+              "rating": 7.0,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 30,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "52eee61d498e076fcc2dc0cd",
+                "createdAt": 1391388189,
+                "text": "Taxpayers getting ripped off ...fees keep going up and course quality going down",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/52eee61d498e076fcc2dc0cd",
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 1
+                },
+                "user": {
+                  "id": "73587067",
+                  "firstName": "Boston",
+                  "lastName": "Strong",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/73587067-NTGCLBMUGRBSG3TN"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b43bee0f964a52044e825e3-10"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4baf8597f964a520ed063ce3",
+              "name": "De Bell Golf Course",
+              "contact": {},
+              "location": {
+                "address": "1500 E Walnut Ave",
+                "crossStreet": "at De Bell Dr",
+                "lat": 34.20661133,
+                "lng": -118.30463313,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.20661133,
+                    "lng": -118.30463313
+                  }
+                ],
+                "distance": 9647,
+                "postalCode": "91501",
+                "cc": "US",
+                "city": "Burbank",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "1500 E Walnut Ave (at De Bell Dr)",
+                  "Burbank, CA 91501",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": true,
+              "stats": {
+                "tipCount": 6,
+                "usersCount": 646,
+                "checkinsCount": 1268
+              },
+              "rating": 7.2,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 30,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "556952ab498e786f34ae6dde",
+                "createdAt": 1432965803,
+                "text": "Short course, with plenty of dog legs, a lot of tricked out greens.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/556952ab498e786f34ae6dde",
+                "logView": true,
+                "agreeCount": 0,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "3003347",
+                  "firstName": "Abi",
+                  "lastName": "Panicker",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/3003347-JTSSSCVIQPYAIKIO.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4baf8597f964a520ed063ce3-11"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b2e8839f964a520f7e124e3",
+              "name": "Los Angeles Country Club",
+              "contact": {},
+              "location": {
+                "address": "10101 Wilshire Blvd",
+                "lat": 34.06831590454296,
+                "lng": -118.4234154631793,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.06831590454296,
+                    "lng": -118.4234154631793
+                  }
+                ],
+                "distance": 11111,
+                "postalCode": "90024",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "10101 Wilshire Blvd",
+                  "Los Angeles, CA 90024",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 9,
+                "usersCount": 580,
+                "checkinsCount": 1451
+              },
+              "rating": 8.7,
+              "ratingColor": "73CF42",
+              "ratingSignals": 37,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "4f6b87a2e4b07199a96ee516",
+                "createdAt": 1332447138,
+                "text": "Probably the best Golf Course in the Los Angeles Area... so check this out if you like to play a few holes!!",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/4f6b87a2e4b07199a96ee516",
+                "likes": {
+                  "count": 12,
+                  "groups": [],
+                  "summary": "12 likes"
+                },
+                "logView": true,
+                "agreeCount": 12,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 1
+                },
+                "user": {
+                  "id": "6980277",
+                  "firstName": "Ben",
+                  "lastName": "B",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/AWOGIV2JPEUTSAMW.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b2e8839f964a520f7e124e3-12"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b9442aff964a520b77134e3",
+              "name": "Bel-Air Country Club",
+              "contact": {
+                "phone": "+13104729563",
+                "formattedPhone": "+1 310-472-9563"
+              },
+              "location": {
+                "address": "10768 Bellagio Rd",
+                "lat": 34.07917840358333,
+                "lng": -118.45069820549439,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.07917840358333,
+                    "lng": -118.45069820549439
+                  }
+                ],
+                "distance": 10828,
+                "postalCode": "90077",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "10768 Bellagio Rd",
+                  "Los Angeles, CA 90077",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 2,
+                "usersCount": 684,
+                "checkinsCount": 1285
+              },
+              "url": "http://www.bel-aircc.org/",
+              "rating": 8.1,
+              "ratingColor": "73CF42",
+              "ratingSignals": 22,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "isOpen": false,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "533796c0498e7b69ab145e38",
+                "createdAt": 1396152000,
+                "text": "I’ve never played a round of golf at the Bel-Air Country Club, but from what I’ve been told I accidentally made a hole-in-one from just outside the course.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/533796c0498e7b69ab145e38",
+                "likes": {
+                  "count": 34,
+                  "groups": [],
+                  "summary": "34 likes"
+                },
+                "logView": true,
+                "agreeCount": 34,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 0
+                },
+                "user": {
+                  "id": "82505562",
+                  "firstName": "The Most Interesting Man in the World",
+                  "gender": "none",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/82505562-GOFQHX5S4J5IX5FZ.jpg"
+                  },
+                  "type": "page"
+                }
+              }
+            ],
+            "referralId": "e-0-4b9442aff964a520b77134e3-13"
+          },
+          {
+            "reasons": {
+              "count": 0,
+              "items": [
+                {
+                  "summary": "This spot is popular",
+                  "type": "general",
+                  "reasonName": "globalInteractionReason"
+                }
+              ]
+            },
+            "venue": {
+              "id": "4b1c0f5ff964a5206b0124e3",
+              "name": "Roosevelt Golf Course",
+              "contact": {},
+              "location": {
+                "address": "2650 N Vermont Ave",
+                "lat": 34.11848618621983,
+                "lng": -118.29358054733629,
+                "labeledLatLngs": [
+                  {
+                    "label": "display",
+                    "lat": 34.11848618621983,
+                    "lng": -118.29358054733629
+                  }
+                ],
+                "distance": 10882,
+                "postalCode": "90027",
+                "cc": "US",
+                "city": "Los Angeles",
+                "state": "CA",
+                "country": "United States",
+                "formattedAddress": [
+                  "2650 N Vermont Ave",
+                  "Los Angeles, CA 90027",
+                  "United States"
+                ]
+              },
+              "categories": [
+                {
+                  "id": "4bf58dd8d48988d1e6941735",
+                  "name": "Golf Course",
+                  "pluralName": "Golf Courses",
+                  "shortName": "Golf Course",
+                  "icon": {
+                    "prefix": "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/golfcourse_",
+                    "suffix": ".png"
+                  },
+                  "primary": true
+                }
+              ],
+              "verified": false,
+              "stats": {
+                "tipCount": 7,
+                "usersCount": 415,
+                "checkinsCount": 1009
+              },
+              "rating": 7.7,
+              "ratingColor": "C5DE35",
+              "ratingSignals": 25,
+              "allowMenuUrlEdit": true,
+              "beenHere": {
+                "count": 0,
+                "marked": false,
+                "lastCheckinExpiredAt": 0
+              },
+              "hours": {
+                "status": "Likely open",
+                "richStatus": {
+                  "entities": [],
+                  "text": "Likely open"
+                },
+                "isOpen": true,
+                "isLocalHoliday": false
+              },
+              "photos": {
+                "count": 0,
+                "groups": []
+              },
+              "hereNow": {
+                "count": 0,
+                "summary": "Nobody here",
+                "groups": []
+              }
+            },
+            "flags": {
+              "outsideRadius": true
+            },
+            "tips": [
+              {
+                "id": "4e052206ae60a90eabba52df",
+                "createdAt": 1308959238,
+                "text": "No carts. 9 holes. Amazing views. Watch for coyotes.",
+                "type": "user",
+                "canonicalUrl": "https://foursquare.com/item/4e052206ae60a90eabba52df",
+                "likes": {
+                  "count": 3,
+                  "groups": [],
+                  "summary": "3 likes"
+                },
+                "logView": true,
+                "agreeCount": 3,
+                "disagreeCount": 0,
+                "todo": {
+                  "count": 1
+                },
+                "user": {
+                  "id": "2093463",
+                  "firstName": "Brennan",
+                  "lastName": "Maxwell",
+                  "gender": "none",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/ZL31ZZ2DYSVU30XM.jpg"
+                  }
+                }
+              }
+            ],
+            "referralId": "e-0-4b1c0f5ff964a5206b0124e3-14"
+          }
+    ]
+  }
+}
