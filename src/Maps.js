@@ -101,25 +101,25 @@ class Maps extends Component {
   * @description locationClicked props from Search.js update
   */
   componentDidUpdate(prevProps, prevState) {
-      this.state.markers.map( (marker) => {
-        if (marker.title === this.props.locationClicked.title) {
-          this.toggleBounce(marker)
-          return this.populateInfoWindow(marker, this.state.largeInfoWindow)
-        }
-      })
+    console.log(this.props.locationClicked)
+    this.state.markers.map( (marker) => {
+      if (marker.title === this.props.locationClicked.name) {
+        this.toggleBounce(marker)
+        return this.populateInfoWindow(marker, this.state.largeInfoWindow)
+      }
+    })
   }
 
   populateInfoWindow = (marker, infowindow) => {
-      infowindow.marker = marker
-      infowindow.setContent('<div>' + marker.title + '</div>')
+    infowindow.marker = marker
+    infowindow.setContent('<div>' + marker.title + '</div>')
 
-      infowindow.open(this.state.map, marker)
-      // Make sure the marker property is cleared if the infowindow is closed.
-      // infowindow.addListener('closeclick', () => {
-      //   console.log(infowindow)
-      //   infowindow.close()
-      // })
-
+    infowindow.open(this.state.map, marker)
+    // Make sure the marker property is cleared if the infowindow is closed.
+    // infowindow.addListener('closeclick', () => {
+    //   console.log(infowindow)
+    //   infowindow.close()
+    // })
   }
 
   /**

@@ -28,6 +28,8 @@ class Search extends Component {
     }
    }
 
+
+
   render() {
     // Holds search query
     let searchQuery
@@ -45,7 +47,7 @@ class Search extends Component {
         />
         <ul>
           {this.props.locations.map( (location) => (
-            <li key={location.title}><a href="#" onClick={ (e) => this.handleLink(e, location) }>{location.title}</a></li>
+            <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
           ) )}
         </ul>
       </nav>
