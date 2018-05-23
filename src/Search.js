@@ -33,7 +33,6 @@ class Search extends Component {
   render() {
     // Holds search query
     let searchQuery
-
     return (
       <nav>
         <h1>Neighborhood Map</h1>

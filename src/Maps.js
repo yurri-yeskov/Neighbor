@@ -101,7 +101,6 @@ class Maps extends Component {
   * @description locationClicked props from Search.js update
   */
   componentDidUpdate(prevProps, prevState) {
-    console.log(this.props.locationClicked)
     this.state.markers.map( (marker) => {
       if (marker.title === this.props.locationClicked.name) {
         this.toggleBounce(marker)
@@ -111,9 +110,14 @@ class Maps extends Component {
   }
 
   populateInfoWindow = (marker, infowindow) => {
+    let k = {data: {}}
+    console.log(marker)
     infowindow.marker = marker
+    fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=C5HM10QZKYCGJZ2NILFVTSK2PF03C1WB0OIEC3CXX3KAAPDA&v=20180523`, {})
+      .then(response => response.json())
+      .then(data => k.data = data.response.venue)
+      console.log(k)
     infowindow.setContent('<div>' + marker.title + '</div>')
-
     infowindow.open(this.state.map, marker)
     // Make sure the marker property is cleared if the infowindow is closed.
     // infowindow.addListener('closeclick', () => {
@@ -137,7 +141,6 @@ class Maps extends Component {
       return { largeInfoWindow: largeInfoWindow }
     })
     let bounds = new google.maps.LatLngBounds()
-    console.log(this.props.locations)
     for (var i = 0; i < this.props.locations.length; i++) {
       let lat = this.props.locations[i].venue.location.lat
       let lng = this.props.locations[i].venue.location.lng
@@ -177,6 +180,7 @@ class Maps extends Component {
   }
 
   render(){
+    console.log(this.props.locations)
     return (    
     <div>
       <div id="map" ref="map"></div>
