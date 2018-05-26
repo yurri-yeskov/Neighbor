@@ -59,6 +59,15 @@ a {
   height: 100%;
 }
 
+/* Infowindow */
+.infowindow {
+  text-align: center;
+}
+
+.address {
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   main {
     grid-template-columns: 1fr 3fr;

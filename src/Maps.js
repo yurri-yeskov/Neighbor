@@ -110,20 +110,38 @@ class Maps extends Component {
   }
 
   populateInfoWindow = (marker, infowindow) => {
-    let k = {data: {}}
-    console.log(marker)
     infowindow.marker = marker
     fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=C5HM10QZKYCGJZ2NILFVTSK2PF03C1WB0OIEC3CXX3KAAPDA&v=20180523`, {})
       .then(response => response.json())
-      .then(data => k.data = data.response.venue)
-      console.log(k)
-    infowindow.setContent('<div>' + marker.title + '</div>')
-    infowindow.open(this.state.map, marker)
+      .then(data => {
+        console.log(data.response.venue)
+        infowindow.setContent( `<div class="infowindow">
+                                  <h2>${data.response.venue.name}</h2>
+                                  <div class="address">${this.address(data.response.venue)
+                                    }</div>
+                                  <div class="imgInfowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt=${data.response.venue.name}></div>
+                                  <div><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></div>
+                                </div>`)
+        infowindow.open(this.state.map, marker)
+          })
+
     // Make sure the marker property is cleared if the infowindow is closed.
     // infowindow.addListener('closeclick', () => {
     //   console.log(infowindow)
     //   infowindow.close()
     // })
+  }
+
+  // Set venue location in infowindow
+  address(venue) {
+    if (venue.location.address &
+        venue.location.city &
+        venue.location.postalCode &
+        venue.location.state) {
+          return venue.location.formattedAddress
+      }else {
+        return venue.location.formattedAddress
+      }
   }
 
   /**
