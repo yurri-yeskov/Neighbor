@@ -17,15 +17,12 @@ class Search extends Component {
   }
 
   searchPlaces(value) {
-    
-
-
-    console.log(value)
-    if (value) {
-      this.props.locations.map( location => {
-
-      })
-    }
+    console.log(value, " searchPlaces")
+  const regex = new RegExp( value, 'i' )
+    this.props.locations.map( location => {
+      if(location.venue.name.match(regex))
+        console.log(location.venue.name)
+    })
    }
 
 
@@ -35,7 +32,7 @@ class Search extends Component {
     let searchQuery
     return (
       <nav>
-        <h1>Neighborhood Map</h1>
+        <h1>Neighborhood Golf Map</h1>
         <DebounceInput
           minLength={2}
           debounceTimeout={300}
