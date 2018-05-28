@@ -123,23 +123,23 @@ class Maps extends Component {
                                   <div><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></div>
                                 </div>`)
         infowindow.open(this.state.map, marker)
-          })
-
-    // Make sure the marker property is cleared if the infowindow is closed.
-    // infowindow.addListener('closeclick', () => {
-    //   console.log(infowindow)
-    //   infowindow.close()
-    // })
+      }
+    )
   }
 
-  // Set venue location in infowindow
+  /**
+  * @description Set venue location in infowindow
+  */
   address(venue) {
-    if (venue.location.address &
-        venue.location.city &
-        venue.location.postalCode &
+    if (venue.location.address &&
+        venue.location.city &&
+        venue.location.postalCode &&
         venue.location.state) {
-          return venue.location.formattedAddress
+          console.log("hi")
+          return `<div>${venue.location.address}, ${venue.location.city}</div>
+                  <div>${venue.location.postalCode}, ${venue.location.state}</div>`
       }else {
+        console.log("hO")
         return venue.location.formattedAddress
       }
   }
