@@ -117,14 +117,25 @@ class Maps extends Component {
         console.log(data.response.venue)
         infowindow.setContent( `<div class="infowindow">
                                   <h2>${data.response.venue.name}</h2>
-                                  <div class="address">${this.address(data.response.venue)
-                                    }</div>
+                                  <div class="addressInfowindow">${this.address(data.response.venue)}</div>
+                                  <div class="descriptionInfowindow">${this.description(data.response.venue)}</div>
                                   <div class="imgInfowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt=${data.response.venue.name}></div>
                                   <div><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></div>
                                 </div>`)
         infowindow.open(this.state.map, marker)
       }
     )
+  }
+
+  /**
+  * @description Set description of venue in infowindow
+  */
+  description(venue) {
+    if (venue.description) {
+      return `${venue.description}`
+    }else {
+      return ``
+    }
   }
 
   /**
@@ -135,11 +146,9 @@ class Maps extends Component {
         venue.location.city &&
         venue.location.postalCode &&
         venue.location.state) {
-          console.log("hi")
-          return `<div>${venue.location.address}, ${venue.location.city}</div>
-                  <div>${venue.location.postalCode}, ${venue.location.state}</div>`
+          return `<div id="location">${venue.location.address}, ${venue.location.city}</div>
+                  <div>Zip Code ${venue.location.postalCode}, ${venue.location.state}</div>`
       }else {
-        console.log("hO")
         return venue.location.formattedAddress
       }
   }
@@ -153,6 +162,9 @@ class Maps extends Component {
     setTimeout(function(){ marker.setAnimation(null) }, 700)
   }
 
+  /**
+  * @description Add all markers to infowindow and fit bounds
+  */
   addMarkers() {
     let largeInfoWindow = new google.maps.InfoWindow()
     this.setState((prevState) => {
@@ -198,7 +210,6 @@ class Maps extends Component {
   }
 
   render(){
-    console.log(this.props.locations)
     return (    
     <div>
       <div id="map" ref="map"></div>

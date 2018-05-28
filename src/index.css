@@ -59,9 +59,22 @@ a {
   height: 100%;
 }
 
-/* Infowindow */
+/**** Infowindow ****/
+
+.gm-style .gm-style-iw {
+  color: #046380 !important;
+}
+
 .infowindow {
   text-align: center;
+  padding-left: 25px;
+}
+.infowindow div {
+  margin-bottom: 1rem;
+}
+
+#location {
+  margin-bottom: 0;
 }
 
 .address {
