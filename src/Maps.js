@@ -211,7 +211,7 @@ class Maps extends Component {
 
   render(){
     return (    
-    <div>
+    <div id="mapContainer">
       <div id="map" ref="map"></div>
       { !this.state.map && <div className="center-md">Loading...</div> } 
     </div>
