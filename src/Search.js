@@ -10,26 +10,62 @@ class Search extends Component {
     onClickLink: PropTypes.func.isRequired
   }
 
+  state = {
+    locations: [],
+    search: false
+  }
+
   
   handleLink(e, location) {
     e.preventDefault()
     this.props.onClickLink(location)
   }
 
+  /**
+  * @description If is a match, sets state.loactions to [] and push all matched locations
+  * @param {string} value - Value of search input
+  */
   searchPlaces(value) {
-    console.log(value, " searchPlaces")
-  const regex = new RegExp( value, 'i' )
-    this.props.locations.map( location => {
-      if(location.venue.name.match(regex))
-        console.log(location.venue.name)
-    })
-   }
+    this.setState({locations: []})
+    if (value) {
+      console.log(this.state.locations)
+      const regex = new RegExp( value, 'i' )
+      this.props.locations.map( location => {
+        if(location.venue.name.match(regex)) {
+          this.setState((prevState) => {
 
+            locations: prevState.locations.push(location)
+          })
+        }
+      })
+      this.setState({search: true})
+    }else {
+      this.resetStateLocations()
+      this.setState({search: false})
 
+    }
+  }
+
+  
+  locationsMap() {
+
+    console.log(this.state.locations)
+    return [ this.state.locations.map( (location) => (
+      <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
+    )) ]
+  }
+
+  /**
+  * @description Set all locations from props.locations
+  */
+  resetStateLocations() {
+    this.setState({locations: this.props.locations })
+  }
 
   render() {
     // Holds search query
     let searchQuery
+
     return (
       <nav>
         <h1>Neighborhood Golf Map</h1>
@@ -42,9 +78,11 @@ class Search extends Component {
           onChange={(event) => this.searchPlaces(event.target.value)}
         />
         <ul>
-          {this.props.locations.map( (location) => (
-            <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
-          ) )}
+          {(!this.state.search) ?
+          this.props.locations.map( (location) => (
+                <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
+              )) : this.locationsMap()
+          }
         </ul>
       </nav>
     )

@@ -11,7 +11,7 @@ class Maps extends Component {
     locationClicked: PropTypes.object.isRequired
   }
 
-  state ={
+  state = {
     markers: [],
     map: {},
     styles: [
