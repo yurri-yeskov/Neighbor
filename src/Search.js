@@ -12,6 +12,10 @@ class Search extends Component {
     hamburger:PropTypes.string.isRequired
   }
 
+  /**
+  * @property {array} this.state.locations - All locations that match search query
+  * @property {number} this.state.search - True if search query is active, false otherwise
+  */
   state = {
     locations: [],
     search: false
@@ -48,9 +52,10 @@ class Search extends Component {
     }
   }
 
-  
+  /**
+  * @description Renders all searched locations
+  */
   locationsMap() {
-
     console.log(this.state.locations)
     return [ this.state.locations.map( (location) => (
       <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
@@ -58,7 +63,7 @@ class Search extends Component {
   }
 
   /**
-  * @description Set all locations from props.locations
+  * @description Set all default locations from props.locations
   */
   resetStateLocations() {
     this.setState({locations: this.props.locations })

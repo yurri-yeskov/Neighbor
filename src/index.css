@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 * {
@@ -11,6 +12,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 4fr;
   height: 100vh;
+
 }
 
 nav {
@@ -120,12 +122,20 @@ a {
   main {
     grid-template-columns: 1fr 2fr;
   }
+
+  h1 {
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (max-width: 700px) {
   main {
     grid-template-columns: 1fr;
 
+  }
+
+  h1 {
+    font-size: 1.2em;
   }
 
   #nav {

@@ -11,6 +11,12 @@ class Maps extends Component {
     locationClicked: PropTypes.object.isRequired
   }
 
+  /**
+  * @property {array} this.state.markers - Array of all markers visible on the map
+  * @property {object} this.state.map - Google Map
+  * @property {array} this.state.styles - Array of Google Map styles
+  * @property {object} this.state.largeInfoWindow - Google Maps InfoWindow
+  */
   state = {
     markers: [],
     map: {},
