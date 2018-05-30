@@ -197,6 +197,10 @@ class Maps extends Component {
         this.toggleBounce(marker)
         this.populateInfoWindow(marker, this.state.largeInfoWindow)
       })
+      // Click on map closes infowindow
+      google.maps.event.addListener(this.state.map, "click", e => {
+        largeInfoWindow.close();
+      })
     }
     this.state.map.fitBounds(bounds)
   }
@@ -211,6 +215,7 @@ class Maps extends Component {
           styles: this.state.styles
         })
         this.addMarkers()
+       
       }
       else this.props.onError()
     }
