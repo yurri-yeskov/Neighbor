@@ -93,19 +93,21 @@ a {
     z-index: 2;
     display: inline;
     position: absolute;
-    background-color: white;
+    background-color: #242f3e;
     right: 0;
     padding:10px;
     visibility: hidden;
+        /*border: 0.5px white solid;*/
 
 }
 
 .bar1, .bar2, .bar3 {
     width: 25px;
     height: 3.5px;
-    background-color: #333;
+    background-color: white;*/
+    color: white;
     margin: 3.5px 0;
-    
+
 }
 
 .hide {
