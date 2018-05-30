@@ -207,6 +207,7 @@ class Maps extends Component {
         this.state.map = new google.maps.Map(this.refs.map, {
           center: {lat: 34.1657053, lng: -118.3970014},
           zoom: 13,
+          fullscreenControl: false, // Fullscreen button disabled
           styles: this.state.styles
         })
         this.addMarkers()
