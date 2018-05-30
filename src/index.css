@@ -1,7 +1,6 @@
 html, body {
   overflow: hidden;
-}
-body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -17,10 +16,12 @@ main {
 
 }
 
+/*** Navigaton sidebar  ***/
 nav {
   background-color: white;
   text-align: center;
   height: 100%;
+  overflow: auto;
 }
 
 h1 {
@@ -141,6 +142,30 @@ a {
   h1 {
     font-size: 1.2em;
   }
+
+  /**** Infowindow ****/
+  .infowindow {
+    text-align: center;
+    padding-left: 25px;
+    width: 50vw;
+    font-size: 1rem;
+  }
+  .infowindow div {
+    margin-bottom: 1rem;
+  }
+
+  #location {
+    margin-bottom: 0;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .imgInfowindow img {
+    width: 40vw;
+  }
+  /**** Infowindow End ****/
 
   #nav {
     position: absolute;
