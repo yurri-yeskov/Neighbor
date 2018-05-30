@@ -9,7 +9,7 @@ class Search extends Component {
   static propTypes = {
     locations: PropTypes.array.isRequired,
     onClickLink: PropTypes.func.isRequired,
-    hamburger:PropTypes.string.isRequired
+    hamburger:PropTypes.string.isRequired // show or hide, use to change css class
   }
 
   /**
@@ -74,9 +74,11 @@ class Search extends Component {
   render() {
     // Holds search query
     let searchQuery
+
+    let slideEffect = (this.props.hamburger === 'hide') ? 'menu-slide-left' : 'menu-slide-right'
     
     return (
-      <nav id="nav" className={this.props.hamburger}>
+      <nav id="nav" className={slideEffect}>
         <h1>Neighborhood Golf Map</h1>
         <DebounceInput
           minLength={2}
