@@ -19,6 +19,15 @@ state = {
     })
   }
 
+  /**
+  * @description Close infowindow sets locationClicked props to {}
+  */
+  resetVenue = () => {
+    this.setState( (prevState) => {
+      return { locationClicked: {}}
+    })
+  }
+
   hamburgerHide(ishidden) {
     console.log("click")
     if (!ishidden){
@@ -40,13 +49,16 @@ state = {
         <Search 
           locations={this.state.locations.response.items}
           hamburger={this.state.hamburger}
-          onClickLink={(onClickLink) => {
-            this.locationClick(onClickLink)
+          onClickLink={(location) => {
+            this.locationClick(location)
           }}
         />
         <Maps 
           locations={this.state.locations.response.items}
           locationClicked={this.state.locationClicked}
+          resetLastVenue={(location) => {
+            this.resetVenue(location)
+          }}
         />
       </main>
     )

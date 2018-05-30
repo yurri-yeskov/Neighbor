@@ -107,6 +107,8 @@ class Maps extends Component {
   * @description locationClicked props from Search.js update
   */
   componentDidUpdate(prevProps, prevState) {
+    console.log("componentDidUpdate")
+    console.log(this.props.locationClicked)
     this.state.markers.map( (marker) => {
       if (marker.title === this.props.locationClicked.name) {
         this.toggleBounce(marker)
@@ -199,8 +201,13 @@ class Maps extends Component {
       })
       // Click on map closes infowindow
       google.maps.event.addListener(this.state.map, "click", e => {
-        largeInfoWindow.close();
+        largeInfoWindow.close()
+        this.resetLastClickedVenue()
       })
+      // Click on close button closes infowindow
+      google.maps.event.addListener(largeInfoWindow,'closeclick',() => {
+        this.resetLastClickedVenue()
+      });
     }
     this.state.map.fitBounds(bounds)
   }
@@ -219,6 +226,13 @@ class Maps extends Component {
       }
       else this.props.onError()
     }
+  }
+
+  /**
+  * @description Close infowindow sets locationClicked props to {}
+  */
+  resetLastClickedVenue() {
+    this.props.resetLastVenue()
   }
 
   render(){

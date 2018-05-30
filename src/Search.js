@@ -32,9 +32,10 @@ class Search extends Component {
   * @param {string} value - Value of search input
   */
   searchPlaces(value) {
+    console.log(this.state.locations, "searchPlaces")
     this.setState({locations: []})
     if (value) {
-      console.log(this.state.locations)
+      
       const regex = new RegExp( value, 'i' )
       this.props.locations.map( location => {
         if(location.venue.name.match(regex)) {
