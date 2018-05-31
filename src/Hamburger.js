@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import {DebounceInput} from 'react-debounce-input'
 
 class Hamburger extends Component {
+
+   // Typechecking with PropTypes
+  static propTypes = {
+    hamburger: PropTypes.func.isRequired
+  }
 
  state = {
     hamburger: false
