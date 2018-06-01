@@ -9,13 +9,23 @@ class App extends Component {
 state = {
     locations: foursquaredata,
     locationClicked: {},
-    data: [],
+    locationsSearch: [],
     hamburger: ''
   }
 
   locationClick = (location) => {
     this.setState( (prevState) => {
       return { locationClicked: location}
+    })
+  }
+
+  /**
+  * @description Set state with queried locations form search form
+  * @param {array} locations - List of all queried locations
+  */
+  searchedLocationsList = (locations) => {
+    this.setState( (prevState) => {
+      return { locationsSearch: locations}
     })
   }
 
@@ -52,9 +62,13 @@ state = {
           onClickLink={(location) => {
             this.locationClick(location)
           }}
+          searchedLocations={(locations) => {
+            this.searchedLocationsList(locations)
+          }}
         />
         <Maps 
           locations={this.state.locations.response.items}
+          allSearchedLocations={this.state.locationsSearch}
           locationClicked={this.state.locationClicked}
           resetLastVenue={(location) => {
             this.resetVenue(location)

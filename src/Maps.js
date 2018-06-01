@@ -8,7 +8,8 @@ class Maps extends Component {
   // Typechecking with PropTypes
   static propTypes = {
     locations: PropTypes.array.isRequired,
-    locationClicked: PropTypes.object.isRequired
+    locationClicked: PropTypes.object.isRequired,
+    allSearchedLocations: PropTypes.array.isRequired // List of all queried locations
   }
 
   /**
@@ -108,7 +109,12 @@ class Maps extends Component {
   */
   componentDidUpdate(prevProps, prevState) {
     console.log("componentDidUpdate")
-    console.log(this.props.locationClicked)
+    console.log(this.props.allSearchedLocations)
+    if (this.props.allSearchedLocations !== false) {
+      console.log(this.state.markers)
+      this.hideMarkers(this.props.allSearchedLocations, this.state.markers)
+
+    }
     this.state.markers.map( (marker) => {
       if (marker.title === this.props.locationClicked.name) {
         this.toggleBounce(marker)
@@ -117,12 +123,47 @@ class Maps extends Component {
     })
   }
 
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevProps.allSearchedLocations !== this.props.allSearchedLocations) {
+  //     console.log("Pretraga")
+  //         this.hideMarkers(this.props.allSearchedLocations)
+
+  //   }
+  // }
+
+  /**
+  * @description Show only markers in the search
+  * @param {array} allSearchedLocations - List of all queried locations
+  * @param {array} allMarkers - List of all markers on map
+  */
+  hideMarkers(allSearchedLocations, allMarkers) {
+
+
+      console.log("hideMarkers")
+      if (allSearchedLocations !== []) {
+        allMarkers.map((marker) => {
+          //console.log(allSearchedLocations)
+          allSearchedLocations.map((allLocations) => {
+            //console.log(allLocations.venue)
+            if (marker.getTitle() !== allLocations.venue.name) {
+              marker.setMap(null)
+            }
+          })
+        })
+      }else{
+        console.log("else")
+        allMarkers.map((marker) => {
+          marker.setMap(this.state.map)
+        })
+      }
+          
+  }
+
   populateInfoWindow = (marker, infowindow) => {
     infowindow.marker = marker
     fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=C5HM10QZKYCGJZ2NILFVTSK2PF03C1WB0OIEC3CXX3KAAPDA&v=20180523`, {})
       .then(response => response.json())
       .then(data => {
-        console.log(data.response.venue)
         infowindow.setContent( `<div class="infowindow">
                                   <h2>${data.response.venue.name}</h2>
                                   <div class="addressInfowindow">${this.address(data.response.venue)}</div>

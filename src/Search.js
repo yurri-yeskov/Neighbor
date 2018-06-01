@@ -9,12 +9,13 @@ class Search extends Component {
   static propTypes = {
     locations: PropTypes.array.isRequired,
     onClickLink: PropTypes.func.isRequired,
-    hamburger:PropTypes.string.isRequired // show or hide, use to change css class
+    hamburger:PropTypes.string.isRequired, // show or hide, use to change css class
+    searchedLocations: PropTypes.func.isRequired
   }
 
   /**
   * @property {array} this.state.locations - All locations that match search query
-  * @property {number} this.state.search - True if search query is active, false otherwise
+  * @property {boolean} this.state.search - True if search query is active, false otherwise
   */
   state = {
     locations: [],
@@ -26,7 +27,7 @@ class Search extends Component {
     e.preventDefault()
     this.props.onClickLink(location)
   }
-
+  
   /**
   * @description If is a match, sets state.loactions to [] and push all matched locations
   * @param {string} value - Value of search input
@@ -41,10 +42,11 @@ class Search extends Component {
         if(location.venue.name.match(regex)) {
           this.setState((prevState) => {
 
-            locations: prevState.locations.push(location)
+            prevState.locations.push(location)
           })
         }
       })
+      this.props.searchedLocations(this.state.locations) // Send searched locations to Map component
       this.setState({search: true})
     }else {
       this.resetStateLocations()
@@ -54,10 +56,10 @@ class Search extends Component {
   }
 
   /**
-  * @description Renders all searched locations
+  * @description Renders list with all searched locations
   */
   locationsMap() {
-    console.log(this.state.locations)
+    console.log(this.state.locations, "locationsMap()")
     return [ this.state.locations.map( (location) => (
       <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
     )) ]
