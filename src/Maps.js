@@ -9,11 +9,12 @@ class Maps extends Component {
   static propTypes = {
     locations: PropTypes.array.isRequired,
     locationClicked: PropTypes.object.isRequired,
-    allSearchedLocations: PropTypes.array.isRequired // List of all queried locations
+    allSearchedLocations: PropTypes.array.isRequired, // List of all queried locations
+    isSearchTrue: PropTypes.bool.isRequired // True if search is active, false otherwise
   }
 
   /**
-  * @property {array} this.state.markers - Array of all markers visible on the map
+  * @property {array} this.state.markers - Array of all markers
   * @property {object} this.state.map - Google Map
   * @property {array} this.state.styles - Array of Google Map styles
   * @property {object} this.state.largeInfoWindow - Google Maps InfoWindow
@@ -105,16 +106,20 @@ class Maps extends Component {
   }
 
   /**
-  * @description locationClicked props from Search.js update
+  * @description Update markers and activate infowindow
   */
   componentDidUpdate(prevProps, prevState) {
-    console.log("componentDidUpdate")
-    console.log(this.props.allSearchedLocations)
-    if (this.props.allSearchedLocations !== false) {
-      console.log(this.state.markers)
+    //console.log("componentDidUpdate")
+    //console.log(this.props.allSearchedLocations)
+    if (this.props.isSearchTrue) {
+      //console.log(this.state.markers)
       this.hideMarkers(this.props.allSearchedLocations, this.state.markers)
-
     }
+
+    if (!this.props.isSearchTrue) {
+      this.showAllMarkers(this.state.markers)
+    }
+
     this.state.markers.map( (marker) => {
       if (marker.title === this.props.locationClicked.name) {
         this.toggleBounce(marker)
@@ -123,40 +128,52 @@ class Maps extends Component {
     })
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevProps.allSearchedLocations !== this.props.allSearchedLocations) {
-  //     console.log("Pretraga")
-  //         this.hideMarkers(this.props.allSearchedLocations)
-
-  //   }
-  // }
-
   /**
   * @description Show only markers in the search
   * @param {array} allSearchedLocations - List of all queried locations
   * @param {array} allMarkers - List of all markers on map
   */
   hideMarkers(allSearchedLocations, allMarkers) {
-
-
-      console.log("hideMarkers")
-      if (allSearchedLocations !== []) {
-        allMarkers.map((marker) => {
-          //console.log(allSearchedLocations)
-          allSearchedLocations.map((allLocations) => {
-            //console.log(allLocations.venue)
-            if (marker.getTitle() !== allLocations.venue.name) {
-              marker.setMap(null)
-            }
-          })
-        })
-      }else{
-        console.log("else")
-        allMarkers.map((marker) => {
-          marker.setMap(this.state.map)
-        })
-      }
+    console.log("hideMarkers")
+    this.hideAllMarkers(allMarkers)
+      allMarkers.map((marker) => {
+        //console.log(allSearchedLocations)
+        allSearchedLocations.map((allLocations) => {
+          //console.log(allLocations.venue)
           
+          if (marker.getTitle() === allLocations.venue.name) {
+            console.log("same name")
+            if(!marker.setMap()) {
+              console.log("marker.setMap(null)")
+              marker.setMap(this.state.map)
+            }
+          }
+        })
+      })
+
+      
+  }
+
+  /**
+  * @description Hide all markers on map
+  * @param {array} allMarkers - List of all markers on map
+  */
+  hideAllMarkers(allMarkers) {
+    console.log("hideAllMarkers")
+    allMarkers.map((marker) => {
+      marker.setMap(null)
+    })
+  }
+
+  /**
+  * @description Show all markers on map
+  * @param {array} allMarkers - List of all markers on map
+  */
+  showAllMarkers(allMarkers) {
+    console.log("showAllMarkers")
+    allMarkers.map((marker) => {
+      marker.setMap(this.state.map)
+    })
   }
 
   populateInfoWindow = (marker, infowindow) => {
@@ -192,14 +209,14 @@ class Maps extends Component {
   */
   address(venue) {
     if (venue.location.address &&
-        venue.location.city &&
-        venue.location.postalCode &&
-        venue.location.state) {
-          return `<div id="location">${venue.location.address}, ${venue.location.city}</div>
-                  <div>Zip Code ${venue.location.postalCode}, ${venue.location.state}</div>`
-      }else {
-        return venue.location.formattedAddress
-      }
+      venue.location.city &&
+      venue.location.postalCode &&
+      venue.location.state) {
+        return `<div id="location">${venue.location.address}, ${venue.location.city}</div>
+                <div>Zip Code ${venue.location.postalCode}, ${venue.location.state}</div>`
+    }else {
+      return venue.location.formattedAddress
+    }
   }
 
   /**

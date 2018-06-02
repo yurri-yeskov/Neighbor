@@ -9,8 +9,9 @@ class Search extends Component {
   static propTypes = {
     locations: PropTypes.array.isRequired,
     onClickLink: PropTypes.func.isRequired,
-    hamburger:PropTypes.string.isRequired, // show or hide, use to change css class
-    searchedLocations: PropTypes.func.isRequired
+    hamburger:PropTypes.string.isRequired,  // show or hide, use to change css class
+    searchedLocations: PropTypes.func.isRequired,
+    isSearch: PropTypes.func.isRequired     // True if search is active, false otherwise
   }
 
   /**
@@ -47,9 +48,12 @@ class Search extends Component {
         }
       })
       this.props.searchedLocations(this.state.locations) // Send searched locations to Map component
+      this.props.isSearch(true)
       this.setState({search: true})
     }else {
-      this.resetStateLocations()
+      this.resetSearchLocations()
+      this.setSearchToEmpty()
+      this.props.isSearch(false)
       this.setState({search: false})
 
     }
@@ -68,8 +72,15 @@ class Search extends Component {
   /**
   * @description Set all default locations from props.locations
   */
-  resetStateLocations() {
+  resetSearchLocations() {
     this.setState({locations: this.props.locations })
+  }
+
+  /**
+  * @description Set searched locations to empty
+  */
+  setSearchToEmpty() {
+    this.props.searchedLocations([])
   }
 
   

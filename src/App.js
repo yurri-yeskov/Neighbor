@@ -10,7 +10,8 @@ state = {
     locations: foursquaredata,
     locationClicked: {},
     locationsSearch: [],
-    hamburger: ''
+    hamburger: '',
+    isSearchOn: false
   }
 
   locationClick = (location) => {
@@ -27,6 +28,14 @@ state = {
     this.setState( (prevState) => {
       return { locationsSearch: locations}
     })
+  }
+
+  /**
+  * @description Set state with queried locations form search form
+  * @param {bool} boolean - If search is active, set to true, false otherwise
+  */
+  isSearchActive = (boolean) => {
+    this.setState( {isSearchOn: boolean})
   }
 
   /**
@@ -65,10 +74,14 @@ state = {
           searchedLocations={(locations) => {
             this.searchedLocationsList(locations)
           }}
+          isSearch={(boolean) => {
+            this.isSearchActive(boolean)
+          }}
         />
         <Maps 
           locations={this.state.locations.response.items}
           allSearchedLocations={this.state.locationsSearch}
+          isSearchTrue={this.state.isSearchOn}
           locationClicked={this.state.locationClicked}
           resetLastVenue={(location) => {
             this.resetVenue(location)
