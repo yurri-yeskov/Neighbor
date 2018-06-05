@@ -10,7 +10,7 @@ state = {
     locations: foursquaredata,
     locationClicked: {},
     locationsSearch: [],
-    hamburger: '',
+    hamburger: true,
     isSearchOn: false
   }
 
@@ -50,9 +50,9 @@ state = {
   hamburgerHide(ishidden) {
     console.log("click")
     if (!ishidden){
-      this.setState({hamburger: ''})
+      this.setState({hamburger: false})
     }else{
-      this.setState({hamburger: 'hide'})
+      this.setState({hamburger: ishidden})
     }
   }
 

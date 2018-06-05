@@ -9,7 +9,7 @@ class Search extends Component {
   static propTypes = {
     locations: PropTypes.array.isRequired,
     onClickLink: PropTypes.func.isRequired,
-    hamburger:PropTypes.string.isRequired,  // show or hide, use to change css class
+    hamburger:PropTypes.bool.isRequired,  // show or hide, use to change css class
     searchedLocations: PropTypes.func.isRequired,
     isSearch: PropTypes.func.isRequired     // True if search is active, false otherwise
   }
@@ -25,6 +25,7 @@ class Search extends Component {
 
   
   handleLink(e, location) {
+    console.log(this.state.locations, "searchPlaces")
     e.preventDefault()
     this.props.onClickLink(location)
   }
@@ -89,7 +90,7 @@ class Search extends Component {
     // Holds search query
     let searchQuery
 
-    let slideEffect = (this.props.hamburger === 'hide') ? 'menu-slide-left' : 'menu-slide-right'
+    let slideEffect = (!this.props.hamburger) ? 'menu-slide-left' : 'menu-slide-right'
     
     return (
       <nav id="nav" className={slideEffect}>

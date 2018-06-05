@@ -9,7 +9,7 @@ class Hamburger extends Component {
   }
 
  state = {
-    hamburger: false
+    hamburger: true
   }
 
   hamburger = () => {

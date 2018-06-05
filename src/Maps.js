@@ -191,6 +191,7 @@ class Maps extends Component {
         infowindow.open(this.state.map, marker)
       }
     )
+    .catch(error => console.error('Error:', error))
   }
 
   /**
