@@ -5,23 +5,11 @@ class Hamburger extends Component {
 
    // Typechecking with PropTypes
   static propTypes = {
-    hamburger: PropTypes.func.isRequired
-  }
-
- state = {
-    hamburger: true
+    hamburger: PropTypes.func.isRequired,
   }
 
   hamburger = () => {
-    console.log(this.state.hamburger)
-    if (this.state.hamburger){
-      this.props.hamburger(false)
-      this.setState({hamburger: false})
-    }else{
-      this.setState({hamburger: true})
-      this.props.hamburger(true)
-    }
-    console.log(this.state.hamburger)
+    this.props.hamburger(true)
   }
 
   render() {

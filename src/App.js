@@ -47,12 +47,12 @@ state = {
     })
   }
 
-  hamburgerHide(ishidden) {
-    console.log("click")
-    if (!ishidden){
+  hamburgerHide(click) {
+    console.log(click)
+    if (this.state.hamburger){
       this.setState({hamburger: false})
     }else{
-      this.setState({hamburger: ishidden})
+      this.setState({hamburger: true})
     }
   }
 
@@ -61,8 +61,8 @@ state = {
     return (
       <main>
         <Hamburger 
-          hamburger={(ishidden) => {
-            this.hamburgerHide(ishidden)
+          hamburger={(click) => {
+            this.hamburgerHide(click)
           }}
         />
         <Search 
@@ -70,6 +70,7 @@ state = {
           hamburger={this.state.hamburger}
           onClickLink={(location) => {
             this.locationClick(location)
+            this.hamburgerHide(true)
           }}
           searchedLocations={(locations) => {
             this.searchedLocationsList(locations)
