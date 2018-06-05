@@ -178,7 +178,7 @@ class Maps extends Component {
 
   populateInfoWindow = (marker, infowindow) => {
     infowindow.marker = marker
-    fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=C5HM10QZKYCGJZ2NILFVTSK2PF03C1WB0OIEC3CXX3KAAPDA&v=20180523`, {})
+    fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=BAGGZ43LJJOH0OFFAEH3I0PRYL2THBLEYYT3L2PYSEWR1UAX&v=20180523`, {})
       .then(response => response.json())
       .then(data => {
         infowindow.setContent( `<div class="infowindow">
