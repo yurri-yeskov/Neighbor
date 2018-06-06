@@ -95,6 +95,7 @@ class Search extends Component {
     return (
       <nav id="nav" className={slideEffect}>
         <h1>Neighborhood Golf Map</h1>
+        <p>Map shows golf courses in my area in 7km radius. App uses Foursquare data</p>
         <DebounceInput
           minLength={2}
           debounceTimeout={300}
