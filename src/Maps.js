@@ -181,13 +181,13 @@ class Maps extends Component {
     fetch(`https://api.foursquare.com/v2/venues/${marker.id}?client_id=FTXP4WO54K05G1TYHCWIQYBH5OQRIG4SMSZBXYBV4MJWIZRT&client_secret=BAGGZ43LJJOH0OFFAEH3I0PRYL2THBLEYYT3L2PYSEWR1UAX&v=20180523`, {})
       .then(response => response.json())
       .then(data => {
-        infowindow.setContent( `<div class="infowindow">
+        infowindow.setContent( `<section class="infowindow">
                                   <h2>${data.response.venue.name}</h2>
                                   <div class="addressInfowindow">${this.address(data.response.venue)}</div>
                                   <div class="descriptionInfowindow">${this.description(data.response.venue)}</div>
-                                  <div class="imgInfowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt=${data.response.venue.name}></div>
-                                  <div><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></div>
-                                </div>`)
+                                  <div class="imgInfowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt="${data.response.venue.name}"></div>
+                                  <nav><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></nav>
+                                </section>`)
         infowindow.open(this.state.map, marker)
       }
     )
