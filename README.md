@@ -16,7 +16,7 @@ https://golfneighborhoodmap.herokuapp.com/
 
 ## App preview
 
-![Golf Neighborhood Map Preview](img/golfapp.png)
+![Golf Neighborhood Map Preview](src/img/golfapp.png)
 
 
 ## Description
@@ -29,7 +29,7 @@ Download compressed project folder or clone the repo git clone https://github.co
 
 Run npm start to start the app
 
-##Usage
+## Usage
 
 Click the location markers on the map to see the golf course image retrieved from Foursquare API and its location
 
