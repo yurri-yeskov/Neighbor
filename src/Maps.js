@@ -191,7 +191,12 @@ class Maps extends Component {
         infowindow.open(this.state.map, marker)
       }
     )
-    .catch(error => console.error('Error:', error))
+    .catch(error => {
+      infowindow.setContent( `<section>
+                                <h1>Data can not load at this time!</h1>
+                                <div>${error}</div>
+                              </section>`)
+    })
   }
 
   /**
