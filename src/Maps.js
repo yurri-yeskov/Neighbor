@@ -134,24 +134,19 @@ class Maps extends Component {
   * @param {array} allMarkers - List of all markers on map
   */
   hideMarkers(allSearchedLocations, allMarkers) {
-    console.log("hideMarkers")
     this.hideAllMarkers(allMarkers)
-      allMarkers.map((marker) => {
-        //console.log(allSearchedLocations)
-        allSearchedLocations.map((allLocations) => {
-          //console.log(allLocations.venue)
-          
-          if (marker.getTitle() === allLocations.venue.name) {
-            console.log("same name")
-            if(!marker.setMap()) {
-              console.log("marker.setMap(null)")
-              marker.setMap(this.state.map)
-            }
+    allMarkers.map((marker) => {
+      //console.log(allSearchedLocations)
+      allSearchedLocations.map((allLocations) => {
+        //console.log(allLocations.venue)
+        
+        if (marker.getTitle() === allLocations.venue.name) {
+          if(!marker.setMap()) {
+            marker.setMap(this.state.map)
           }
-        })
+        }
       })
-
-      
+    })
   }
 
   /**
@@ -159,7 +154,6 @@ class Maps extends Component {
   * @param {array} allMarkers - List of all markers on map
   */
   hideAllMarkers(allMarkers) {
-    console.log("hideAllMarkers")
     allMarkers.map((marker) => {
       marker.setMap(null)
     })
@@ -170,7 +164,6 @@ class Maps extends Component {
   * @param {array} allMarkers - List of all markers on map
   */
   showAllMarkers(allMarkers) {
-    console.log("showAllMarkers")
     allMarkers.map((marker) => {
       marker.setMap(this.state.map)
     })
