@@ -21,7 +21,7 @@ https://golfneighborhoodmap.herokuapp.com/
 
 ## Description
 
-A single-page application featuring a map of my neighborhood, Los Angeles. Map displays golf courses markers by default, and displays the filtered subset of location markers when a user search filter is applied. Text input field should be used to filter the locations.
+A single-page application featuring a map of my neighborhood, in Los Angeles. Map displays golf courses markers by default, and displays the filtered subset of location markers when a user search filter is applied. Text input field should be used to filter the locations.
 
 ## Running the project
 
