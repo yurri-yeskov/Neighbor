@@ -36,10 +36,11 @@ Click the location markers on the map to see the golf course image retrieved fro
 Or use the search box to type the golf course name and see location on the map
 
 ## Technology used
-Reactjs
-react-debounce-input / https://www.npmjs.com/package/react-debounce-input
-Google Maps API
-Foursquare API
+
+* Reactjs
+* react-debounce-input / https://www.npmjs.com/package/react-debounce-input
+* Google Maps API
+* Foursquare API
 
 ## Thank you
 
