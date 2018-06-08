@@ -48,7 +48,6 @@ state = {
   }
 
   hamburgerHide(click) {
-    console.log(click)
     if (this.state.hamburger){
       this.setState({hamburger: false})
     }else{
