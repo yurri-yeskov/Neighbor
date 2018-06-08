@@ -27,7 +27,8 @@ A single-page application featuring a map of my neighborhood, in Los Angeles. Ma
 
 Download compressed project folder or clone the repo git clone https://github.com/Igor333m/neighborhoodmap.git
 
-Run npm start to start the app
+First run npm install in command prompt / terminal
+Then run npm start to start the app
 
 ## Usage
 
