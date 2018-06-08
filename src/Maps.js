@@ -182,10 +182,12 @@ class Maps extends Component {
     .catch(error => {
       console.log('There has been a problem with your fetch operation: ', error.message)
       console.log("ERROOOOOROO")
-      return `<section class="error">
+      infowindow.setContent(`<section class="error">
                 <h1>Data can not load at this time!</h1>
-                <div>${error}</div>
-              </section>`
+                <div>${error.message}</div>
+              </section>`)
+      infowindow.open(this.state.map, marker)
+
     })
   }
 
@@ -266,7 +268,7 @@ class Maps extends Component {
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
-      if (!isScriptLoadSucceed) {
+      if (isScriptLoadSucceed) {
         this.state.map = new google.maps.Map(this.refs.map, {
           center: {lat: 34.1657053, lng: -118.3970014},
           zoom: 13,
