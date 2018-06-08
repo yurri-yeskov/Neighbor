@@ -22,10 +22,8 @@ class Search extends Component {
     locations: [],
     search: false
   }
-
   
   handleLink(e, location) {
-    console.log(this.state.locations, "searchPlaces")
     e.preventDefault()
     this.props.onClickLink(location)
   }
@@ -35,7 +33,6 @@ class Search extends Component {
   * @param {string} value - Value of search input
   */
   searchPlaces(value) {
-    console.log(this.state.locations, "searchPlaces")
     this.setState({locations: []})
     if (value) {
       
@@ -43,7 +40,6 @@ class Search extends Component {
       this.props.locations.map( location => {
         if(location.venue.name.match(regex)) {
           this.setState((prevState) => {
-
             prevState.locations.push(location)
           })
         }
@@ -64,7 +60,6 @@ class Search extends Component {
   * @description Renders list with all searched locations
   */
   locationsMap() {
-    console.log(this.state.locations, "locationsMap()")
     return [ this.state.locations.map( (location) => (
       <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>
     )) ]
@@ -83,8 +78,6 @@ class Search extends Component {
   setSearchToEmpty() {
     this.props.searchedLocations([])
   }
-
-  
 
   render() {
     // Holds search query
@@ -106,7 +99,7 @@ class Search extends Component {
           value={searchQuery}
           onChange={(event) => this.searchPlaces(event.target.value)}
         />
-        <ul id="searchMenu">
+        <ul id="search-menu">
           {(!this.state.search) ?
           this.props.locations.map( (location) => (
                 <li key={location.venue.id}><a href="#" onClick={ (e) => this.handleLink(e, location.venue) }>{location.venue.name}</a></li>

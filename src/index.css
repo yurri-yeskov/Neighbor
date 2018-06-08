@@ -174,7 +174,7 @@ a {
     width: 100%;
   }
 
-  .imgInfowindow img {
+  .img-infowindow img {
     width: 40vw;
   }
   /**** Infowindow End ****/
@@ -245,11 +245,7 @@ a {
    visibility: visible;
   }
 
-  #mapContainer {
-    
-  }
-
-  #searchMenu {
+  #search-menu {
     overflow: auto;
   }
 

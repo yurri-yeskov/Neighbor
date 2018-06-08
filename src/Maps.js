@@ -173,15 +173,13 @@ class Maps extends Component {
                                   <h2>${data.response.venue.name}</h2>
                                   <div class="addressInfowindow">${this.address(data.response.venue)}</div>
                                   <div class="descriptionInfowindow">${this.description(data.response.venue)}</div>
-                                  <div class="imgInfowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt="${data.response.venue.name}"></div>
+                                  <div class="img-infowindow"><img src="https://igx.4sqi.net/img/general/250x250${data.response.venue.bestPhoto.suffix}" alt="${data.response.venue.name}"></div>
                                   <nav><a href="${data.response.venue.canonicalUrl}"  target="_blank"><i class="fab fa-foursquare fa-lg"></i> See details on foursquare</a></nav>
                                 </section>`)
         infowindow.open(this.state.map, marker)
       }
     )
     .catch(error => {
-      console.log('There has been a problem with your fetch operation: ', error.message)
-      console.log("ERROOOOOROO")
       infowindow.setContent(`<section class="error">
                 <h1>Data can not load at this time!</h1>
                 <div>${error.message}</div>
