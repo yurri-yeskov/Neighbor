@@ -178,7 +178,6 @@ a {
     top: 0;
     left: 0;
     z-index: 1;
-    overflow: auto;
   }
 
   /*** Menu slide animations ***/
@@ -239,11 +238,11 @@ a {
   }
 
   #mapContainer {
-    /*height: auto !important;*/
+    
   }
 
   #searchMenu {
-    
+    overflow: auto;
   }
 
 }
