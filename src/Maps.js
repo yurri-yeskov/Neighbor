@@ -102,17 +102,15 @@ class Maps extends Component {
               stylers: [{color: '#17263c'}]
             }
     ],
-    largeInfoWindow: null
+    largeInfoWindow: null,
+    mapError: false
   }
 
   /**
   * @description Update markers and activate infowindow
   */
   componentDidUpdate(prevProps, prevState) {
-    //console.log("componentDidUpdate")
-    //console.log(this.props.allSearchedLocations)
     if (this.props.isSearchTrue) {
-      //console.log(this.state.markers)
       this.hideMarkers(this.props.allSearchedLocations, this.state.markers)
     }
 
@@ -136,10 +134,7 @@ class Maps extends Component {
   hideMarkers(allSearchedLocations, allMarkers) {
     this.hideAllMarkers(allMarkers)
     allMarkers.map((marker) => {
-      //console.log(allSearchedLocations)
       allSearchedLocations.map((allLocations) => {
-        //console.log(allLocations.venue)
-        
         if (marker.getTitle() === allLocations.venue.name) {
           if(!marker.setMap()) {
             marker.setMap(this.state.map)
@@ -185,10 +180,12 @@ class Maps extends Component {
       }
     )
     .catch(error => {
-      infowindow.setContent( `<section>
-                                <h1>Data can not load at this time!</h1>
-                                <div>${error}</div>
-                              </section>`)
+      console.log('There has been a problem with your fetch operation: ', error.message)
+      console.log("ERROOOOOROO")
+      return `<section class="error">
+                <h1>Data can not load at this time!</h1>
+                <div>${error}</div>
+              </section>`
     })
   }
 
@@ -239,9 +236,7 @@ class Maps extends Component {
     for (var i = 0; i < this.props.locations.length; i++) {
       let lat = this.props.locations[i].venue.location.lat
       let lng = this.props.locations[i].venue.location.lng
-      
       let title = this.props.locations[i].venue.name
-
       let marker = new google.maps.Marker({
         icon: "http://maps.google.com/mapfiles/kml/pal2/icon5.png",
         map: this.state.map,
@@ -271,7 +266,7 @@ class Maps extends Component {
 
   componentWillReceiveProps ({ isScriptLoaded, isScriptLoadSucceed }) {
     if (isScriptLoaded && !this.props.isScriptLoaded) { // load finished
-      if (isScriptLoadSucceed) {
+      if (!isScriptLoadSucceed) {
         this.state.map = new google.maps.Map(this.refs.map, {
           center: {lat: 34.1657053, lng: -118.3970014},
           zoom: 13,
@@ -281,7 +276,11 @@ class Maps extends Component {
         this.addMarkers()
        
       }
-      else this.props.onError()
+      else {
+        this.setState((prevState) => {
+          return { error: true }
+        })
+      }
     }
   }
 
@@ -293,11 +292,11 @@ class Maps extends Component {
   }
 
   render(){
-    return (    
-    <div id="mapContainer">
-      <div id="map" ref="map"></div>
-      { !this.state.map && <div className="center-md">Loading...</div> } 
-    </div>
+    return (
+      (!this.state.error) ? (<div id="mapContainer">
+      <div id="map" role="application" ref="map"></div>
+      </div>) : (<div class="map-error">"Google Maps can not load at this time!"</div>)
+    
     )
   }
 }

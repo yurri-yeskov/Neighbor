@@ -118,6 +118,14 @@ a {
 .hide {
   visibility: hidden;
 }
+.map-error {
+  margin: auto;
+  color: white;
+  background-color: #242f3e;
+  padding: 3rem;
+  border-radius: 1rem;
+
+}
 
 
 /**** @media all ****/
