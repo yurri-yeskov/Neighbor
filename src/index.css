@@ -29,10 +29,14 @@ h1 {
   display: inline-block;
 }
 
+label {
+  display: inline;
+}
+
 input {
-  width: 95%;
+  width: 70%;
   height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 ul {
@@ -174,6 +178,7 @@ a {
     top: 0;
     left: 0;
     z-index: 1;
+    overflow: auto;
   }
 
   /*** Menu slide animations ***/

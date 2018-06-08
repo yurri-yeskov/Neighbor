@@ -96,11 +96,13 @@ class Search extends Component {
       <nav id="nav" className={slideEffect}>
         <h1>Neighborhood Golf Map</h1>
         <p>Map shows golf courses in my area in 7km radius. App uses Foursquare data</p>
+        <label for="search">Search: </label>
         <DebounceInput
           minLength={2}
+          name="search"
           debounceTimeout={300}
           autoFocus
-          placeholder=" Search..."
+          placeholder=" Search for golf courses"
           value={searchQuery}
           onChange={(event) => this.searchPlaces(event.target.value)}
         />
